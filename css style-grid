@@ -1,0 +1,63 @@
+/* FULL HEIGHT AND WIDTH */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* GRID LAYOUT */
+body.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 1fr 80px;
+  gap: 5px;
+  height: 100vh;
+
+  grid-template-areas:
+    "header header header header"
+    "main main main sidebar"
+    "footer footer footer footer";
+}
+
+/* COMMON STYLES FOR ALL GRID ITEMS */
+header, main, aside, footer {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  border-radius: 15px;
+  color: white;
+  font-size: 24px;
+}
+
+/* INDIVIDUAL GRID AREAS */
+header {
+  grid-area: header;
+  background-color: orange;
+  border: 2px solid darkorange;
+}
+
+main {
+  grid-area: main;
+  background-color: cornflowerblue;
+  border: 2px solid darkblue;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: red;
+  border: 2px solid darkred;
+}
+
+footer {
+  grid-area: footer;
+  background-color: green;
+  border: 2px solid darkgreen;
+}
+
+/* H2 STYLING */
+h2 {
+  margin: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+}
